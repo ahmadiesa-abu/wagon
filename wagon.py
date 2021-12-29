@@ -1048,7 +1048,8 @@ def _create_wagon(args):
             wheel_args=args.wheel_args,
             archive_format=args.format,
             build_tag=args.build_tag,
-            pip_paths=args.pip or [None])
+            pip_paths=args.pip or [None],
+            supported_platform=args.supported_platform)
     except WagonError as ex:
         sys.exit(ex)
 
